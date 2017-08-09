@@ -3,10 +3,10 @@
   padding: 0;
 }
 body {
-  background-color:  #e6ecf0;
+  background-color:  #f8f8f8;
   font-family: Roboto;
 }
-h1,h3{
+h1,h3,h6{
   color: black;
   text-align: center;
 }
@@ -21,7 +21,7 @@ a {
 }
 #transparent{
   background-color: transparent;
-  width: 50vw;
+  width: 80vw;
 }
 header#head{
   height: 100vh;
@@ -32,6 +32,7 @@ div#About{
   box-sizing: border-box;
 }
 div#Products{
+  margin-top: 32px;
   display: flex;
   /*justify-content: space-between;*/
 
@@ -39,6 +40,10 @@ div#Products{
 
 div#Products #right{
   margin-top: 20%;
+}
+
+div#Team{
+  display: flex;
 }
 
 img.ring-outer{
@@ -78,7 +83,7 @@ img.ring-outer{
   left: 50%;
   z-index: -1;
   -webkit-transform: translateX(-50%) translateY(-50%);
-          transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
 }
 .b-heading {
   margin-bottom: 20px;
@@ -514,23 +519,23 @@ img.ring-outer{
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   white-space: nowrap;
 }
 .b-main-menu-list__item {
   display: inline-block;
   position: relative;
 /*items-indents = 1.8vw;//25px
-    margin-right:items-indents;*/
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-left: -20px;
-  margin-right: -20px;
+margin-right:items-indents;*/
+text-transform: uppercase;
+letter-spacing: 1px;
+margin-left: -20px;
+margin-right: -20px;
 }
 .b-main-menu-list__item:first-child {
   margin-left: 0;
@@ -578,7 +583,7 @@ img.ring-outer{
   border: 10px solid transparent;
   border-left: 14px solid #fff;
   -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   margin-left: 7px;
 }
 .b-slogan__button-play:hover {
@@ -633,3 +638,348 @@ img.ring-outer{
 img.ring-outer { animation: 2s rotate360 infinite linear; }
 
 
+
+
+
+
+
+
+
+
+
+
+
+.intro_card {
+    width: 400px;
+    height: 530px;
+    position: relative;
+    margin: 50px auto;
+    transition: all 1s ease-in-out;
+    transform-style: preserve-3d
+}
+
+.intro_card:hover {
+    transform: rotateY(180deg)
+}
+
+.intro_card > div {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #FFF;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 30px #999;
+    text-align: center;
+    backface-visibility: hidden
+}
+
+.intro_card .front {
+    z-index: 2
+}
+
+.intro_card .front section img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    padding: 3px;
+    border: 1px solid #EEE
+}
+
+.intro_card .front section h1 {
+    color: #66679A;
+    text-transform: uppercase
+}
+
+.intro_card .front hr {
+    height: 1px;
+    background: #DDD;
+    border: none
+}
+
+.intro_card .front > p {
+    line-height: 25px;
+    margin-bottom: 30px
+}
+
+.intro_card .front span {
+    color: #66679A;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: 1px solid #66679A;
+    padding: 10px;
+}
+
+.intro_card .back {
+    z-index: 1;
+    transform: rotateY(180deg)
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Typo */
+
+h5 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-top: 0;
+}
+
+h3 {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0 0 24px 0;
+}
+
+.copyrights {
+  font-size: 14px;
+  font-weight: 400;
+  color: #757575;
+}
+
+a:link {
+  font-weight: 400;
+  color: rgba(255, 255, 255, 1);
+}
+a:visited {
+  color: rgba(255, 255, 255, 1);
+}
+a:hover {
+  text-decoration: none;
+  color: #bbbbbb;
+}
+
+/* Buttons */
+
+.language, .currency {
+  width: 100%;
+  background-color: #484848;
+  border-radius: 2px;
+  position: relative;
+}
+
+.language {
+  margin-bottom: 12px;
+}
+
+.choose-button {
+  font-size: 16px;
+  font-weight: 400;
+  width: 100%;
+  height: 40px;
+  padding: 0 10px;
+  border: 1px solid #484848;
+  border-radius: 2px;
+  background-color: transparent;
+  appearance: none;
+  position: relative;
+}
+
+.remove-padding {
+  padding: 0;
+}
+
+.language:before, .currency:before {
+  content: "";
+  width: 0; 
+  height: 0; 
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-top: 7px solid #757575;
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  }
+
+/* Social icons list */
+
+.social {
+  margin-bottom: 12px;
+  
+  & li {
+    display: inline-block;
+    padding: 0 5px;
+        
+      & svg {
+        width: 36px;
+        height: 36px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 50%;
+        
+        &:hover {
+          background-color: rgba(255, 255, 255, 0.2);
+        }
+      }
+    }
+}
+
+/* Main */
+
+/* Typo */
+h5 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-top: 0;
+}
+
+h3 {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0 0 24px 0;
+}
+
+.copyrights {
+  font-size: 14px;
+  font-weight: 400;
+  color: #757575;
+}
+
+a:link {
+  font-weight: 400;
+  color: white;
+}
+
+a:visited {
+  color: white;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #bbbbbb;
+}
+
+/* Buttons */
+.language, .currency {
+  width: 100%;
+  background-color: #484848;
+  border-radius: 2px;
+  position: relative;
+}
+
+.language {
+  margin-bottom: 12px;
+}
+
+.choose-button {
+  font-size: 16px;
+  font-weight: 400;
+  width: 100%;
+  height: 40px;
+  padding: 0 10px;
+  border: 1px solid #484848;
+  border-radius: 2px;
+  background-color: transparent;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  position: relative;
+}
+
+.remove-padding {
+  padding: 0;
+}
+
+.language:before, .currency:before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-top: 7px solid #757575;
+  position: absolute;
+  top: 18px;
+  right: 18px;
+}
+
+/* Social icons list */
+.social {
+  margin-bottom: 12px;
+}
+.social li {
+  display: inline-block;
+  padding: 0 5px;
+}
+.social li svg {
+  width: 36px;
+  height: 36px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+}
+.social li svg:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Main */
+div#Contact {
+  background-color: #2b2d2e;
+  background-image: url("https://a0.muscache.com/airbnb/static/footer/background-317dd7c2cb678ddbdb0a983d511cb9a0.png");
+  color: white;
+  -webkit-font-smoothing: antialiased;
+  /*display: flex;*/
+}
+
+div#Contact > section div.foot{
+  display: flex;
+  justify-content: space-around;
+}
+
+.container {
+  width: 80%;
+  padding: 48px;
+}
+
+.header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.footer {
+  text-align: center;
+}
+
+@media screen and (max-width: 1100px) {
+  div.list {
+    display: none;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .list {
+    margin-top: 48px;
+  }
+}

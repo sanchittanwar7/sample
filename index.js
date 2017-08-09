@@ -47,3 +47,5 @@ function goTo(value){
       clearInterval(number);
   },5);
 }
+
+
