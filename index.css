@@ -19,6 +19,16 @@ a {
   outline: none;
   text-decoration: none;
 }
+
+div#navbar{
+  display: flex;
+  justify-content: space-around;
+}
+h1.logo{
+  color: white;
+  font-weight: 400;
+}
+
 #transparent{
   background-color: transparent;
   width: 80vw;
@@ -983,3 +993,60 @@ div#Contact > section div.foot{
     margin-top: 48px;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.stroke-solid {
+  stroke-dashoffset: 0;
+  stroke-dashArray: 300;
+  stroke-width: 4px;
+  transition: stroke-dashoffset 1s ease,  opacity 1s ease;
+}
+
+.icon {
+  transform: scale(0.8);
+  transform-origin: 50% 50%;
+  transition: transform 200ms ease-out;
+}
+
+#play:hover .stroke-solid {
+  opacity: 1;
+  stroke-dashoffset: 300;
+}
+#play:hover .icon {
+  transform: scale(0.9);
+}
+/*
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  background-image: url("http://taylorswines.uat.playhousedigital.com/media/wysiwyg/TaylorsWines/Homepage/img_video.png");
+}*/
+
+#play {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+}
+
