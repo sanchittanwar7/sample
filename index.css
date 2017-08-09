@@ -1,1205 +1,635 @@
-@import url(https://fonts.googleapis.com/css?family=Montserrat);
-@import url(https://fonts.googleapis.com/css?family=Droid+Sans);
+*{
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color:  #e6ecf0;
+  font-family: Roboto;
+}
+h1,h3{
+  color: black;
+  text-align: center;
+}
+p {
+  color: #14171a;
+  text-align: center;
+}
+a {
+  color: inherit;
+  outline: none;
+  text-decoration: none;
+}
+#transparent{
+  background-color: transparent;
+  width: 50vw;
+}
+header#head{
+  height: 100vh;
+}
+div#About{
+  margin-top: 32px;
+  padding: 16px;
+  box-sizing: border-box;
+}
+div#Products{
+  display: flex;
+  /*justify-content: space-between;*/
 
-html {
-  font-family: 'Open Sans', sans-serif;
-  background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/153121/DokfmSW_(1).png') no-repeat center fixed;
+}
+
+div#Products #right{
+  margin-top: 20%;
+}
+
+img.ring-outer{
+  margin: auto;
+  display: block;
+}
+.p-main-header {
+  position: relative;
+  text-align: center;
+  padding-bottom: 60px;
+  overflow: hidden;
+  background: rgba(15,27,50,0.85);
+  height: 250px;
+}
+.p-main-header_md {
+  background: none;
+  height: 630px;
+}
+.p-main-header_sm {
+  background-repeat: no-repeat;
   background-size: cover;
-  overflow-y: auto;
-  overflow-x: hidden;
+  height: auto;
 }
-
-#nav-bar-overlay {
-  background-color: rgba(28,21,19,.97);
-  opacity: 0.99;
-  position: fixed;
-  height: 59px;
-  left: 0;
-  top: 0;
-  width: 100%;
-  z-index: 10000;
-  display: none;
+.p-main-header_about {
+  background: none;
+  z-index: 1;
 }
-
-#nav-bar-item-top, #nav-bar-item-drinks, #nav-bar-item-menu, #nav-bar-item-contact {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 16px;
-  text-decoration: none;
-  color: #eee;
-  padding: 0px 45px 0px 45px;
-  display: inline-block;
-  margin-top: 20px;
-  transition: 0.2s ease-in-out;
-}
-
-#nav-bar-item-top:hover, #nav-bar-item-drinks:hover, #nav-bar-item-menu:hover, #nav-bar-item-contact:hover {
-  color: #E07065;
-}
-
-#site-title {
-  font-family: 'Montserrat', sans-serif;
-  color: #fff;
-  font-size: 51px;
-  margin-top: 55px;
-  margin-left: 50%;
-  margin-right: -50%;
-  transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-}
-
-#phone-number {
-  font-family: 'Montserrat', sans-serif;
-  color: #fff;
-  font-size: 16px;
-  margin-left: 50%;
-  margin-right: -50%;
+.b-bgvideo {
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  background-size: cover;
+  background-position: center;
   position: absolute;
-  left: -52px;
-  top: 62px;
-}
-
-#nav-bar {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 65px;
-}
-
-#no-opacity {
-  margin-top: 66px;
-  margin-bottom: 1px;
-  height: 660px;
-}
-
-#no-opacity-two {
-  margin-top: 710px;
-  margin-bottom: -8px;
-  margin-left: -8px;
-  margin-right: -8px;
-  height: 360px;
-}
-
-#no-opacity-three {
-  margin-top: 710px;
-  margin-bottom: -8px;
-  margin-left: -8px;
-  margin-right: -8px;
-  height: 700px;
-}
-
-#reservation-button {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 16px;
-  text-decoration: none;
-  color: #fff;
-  background-color: #E07065;
-  padding: 18px 30px 17px 30px;
-  margin: 0;
-  position: absolute;
-  top: 655%;
+  top: 50%;
   left: 50%;
-  margin-right: -50%;
-  transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
+  z-index: -1;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
 }
-
-#sections {
-  text-decoration: none;
-  color: #eee;
-  padding: 16px 20px 16px 21px;
-  margin: 0;
-  position: absolute;
-  top: 84%;
-  left: 50%;
-  margin-right: -50%;
-  transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
+.b-heading {
+  margin-bottom: 20px;
+  font-weight: 800;
 }
-
-#drinks-section {
-  font-family: 'Montserrat', sans-serif;
-  text-decoration: none;
-  font-size: 16px;
-  color: #fff;
-  float: left;
-  margin-right: 100px;
-  margin: 0;
-  position: absolute;
-  left: -249px;
-  margin-right: -50%;
-  transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  transition: 0.090s ease-in-out;
+.b-heading_main {
+  font-weight: 300;
+  font-size: 3.2rem;
+  margin-bottom: 6px;
 }
-
-#drinks-section:hover {
-  color: #E07065;
-}
-
-#menu-section {
-  font-family: 'Montserrat', sans-serif;
-  text-decoration: none;
-  font-size: 16px;
-  color: #fff;
-  float: right;
-  margin-right: 100px;
-  margin: 0;
-  position: absolute;
-  left: 288px;
-  margin-right: -50%;
-  transform: translate(-50%, -50%);
-  transition: 0.090s ease-in-out;
-}
-
-#menu-section:hover {
-  color: #E07065;
-}
-
-#location-section {
-  font-family: 'Montserrat', sans-serif;
-  text-decoration: none;
-  font-size: 16px;
-  color: #fff;
-  float: left;
-  margin-right: 100px;
-  margin: 0;
-  position: absolute;
-  left: -375px;
-  margin-right: -50%;
-  transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  transition: 0.090s ease-in-out;
-}
-
-#location-section:hover {
-  color: #E07065;
-}
-
-#contact-section {
-  font-family: 'Montserrat', sans-serif;
-  text-decoration: none;
-  font-size: 16px;
-  color: #fff;
-  float: right;
-  margin-right: 100px;
-  margin: 0;
-  position: absolute;
-  left: 405px;
-  margin-right: -50%;
-  transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  transition: 0.090s ease-in-out;
-}
-
-#contact-section:hover {
-  color: #E07065;
-}
-
-#classic-czech-cuisine {
-  font-family: 'Droid Sans', sans-serif;
-  font-weight: 100;
-  color: #fff;
-  font-size: 60px;
-  margin: 0;
-  position: absolute;
-  top: 360px;
-  left: 50%;
-  margin-right: -50%;
-  transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-}
-
-@media(max-width: 1100px) {
-  #classic-czech-cuisine {
-    font-size: 46px;
-    top: 350px;
-    white-space: nowrap
+@media all and (min-width: 1280px) {
+  .b-heading_main {
+    font-size: 3.6rem;
+    margin-bottom: 10px;
   }
 }
-
-h3 {
-  float: left;
-  font-size: 25px;
-  font-weight: 100;
-  color: #333333;
-  margin-left: 17px;
-  margin-top: 16px;
+.b-heading_1 {
+  font-size: 4.8rem;
 }
-
-#lunch-menu-bar-text {
-  font-family: 'Montserrat', sans-serif;
-  color: #ff8b38;
-  font-size: 30px;
-  padding: 4px 0px 0px 0px;
-  margin: 0;
-  position: absolute;
-  left: 50%;
-  margin-top: 35px;
-  margin-right: -50%;
-  transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  transition: 0.2s ease-in-out;
+@media all and (min-width: 1280px) {
+  .b-heading_1 {
+    font-size: 6rem;
+  }
 }
-
-#lunch-menu-bar-text:hover {
-  cursor: pointer;
+.b-heading_2 {
+  font-size: 4.2rem;
 }
-
-#dinner-menu-bar-text {
-  font-family: 'Montserrat', sans-serif;
-  color: #c9c9c9;
-  font-size: 30px;
-  padding: 4px 0px 0px 0px;
-  margin: 0;
-  position: absolute;
-  left: 50%;
-  margin-top: 35px;
-  margin-right: -50%;
-  margin-left: -280px;
-  transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  transition: 0.2s ease-in-out;
+@media all and (min-width: 1280px) {
+  .b-heading_2 {
+    font-size: 4.8rem;
+  }
 }
-
-#happy-hour-bar-text {
-  font-family: 'Montserrat', sans-serif;
-  color: #c9c9c9;
-  font-size: 30px;
-  padding: 4px 0px 0px 0px;
-  margin: 0;
-  position: absolute;
-  left: 50%;
-  margin-top: 35px;
-  margin-right: -50%;
-  margin-left: 275px;
-  transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  transition: 0.2s ease-in-out;
+.b-heading_3-5 {
+  font-size: 3rem;
 }
-
-#happy-hour-bar-text:hover, #lunch-menu-bar-text:hover, #dinner-menu-bar-text:hover {
-  cursor: pointer;
+.b-heading_3 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  text-transform: uppercase;
 }
-
-#when-available-lunch {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 15px;
-  color: #ff8b38;
-  margin: 0;
-  position: absolute;
-  left: 50%;
-  margin-right: -50%;
-  margin-top: 60px;
-  transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  transition: 0.2s ease-in-out;
+.b-text-default {
+  font-weight: 400;
 }
-
-#when-available-dinner {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 15px;
-  color: #c7c7c7;
-  margin: 0;
-  position: absolute;
-  left: 50%;
-  margin-left: -279px;
-  margin-right: -50%;
-  margin-top: 60px;
-  transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  transition: 0.2s ease-in-out;
+.b-text-default_sm {
+  font-size: 1.5rem;
 }
-
-#when-available-happy {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 15px;
-  color: #c9c9c9;
-  margin: 0;
-  position: absolute;
-  left: 50%;
-  margin-left: 277px;
-  margin-right: -50%;
-  margin-top: 60px;
-  transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  transition: 0.2s ease-in-out;
+.b-text-default_sm-resp {
+  font-size: 1.1rem;
 }
-
-#beer-bar-text {
-  font-family: 'Montserrat', sans-serif;
+@media all and (min-width: 1280px) {
+  .b-text-default_sm-resp {
+    font-size: 1.4rem;
+  }
+}
+.b-text-default_smx {
+  font-size: 1.5rem;
+}
+.b-text-default_md {
+  font-size: 1.6rem;
+}
+.b-text-default_lg {
+  font-size: 1.8rem;
+}
+.b-text-italic {
+  font-style: italic;
+}
+.b-text-italic_sm {
+  font-size: 1.3rem;
+}
+.b-text-bold {
+  font-weight: 800;
+}
+.b-text-bold_xs {
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.b-text-bold_sm {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.b-text-bold_sm-resp {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+@media all and (min-width: 1280px) {
+  .b-text-bold_sm-resp {
+    font-size: 1.4rem;
+  }
+}
+.b-text-bold_md {
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.b-text-color_white {
   color: #fff;
-  font-size: 26px;
-  font-weight: 100;
-  margin: 0;
-  position: absolute;
-  left: 50%;
-  margin-top: -12px;
-  margin-left: 30px;
-  margin-right: -50%;
-  transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
 }
-
-#first-solid-bar {
-  background-color: #fff;
-  margin-left: -9px;
-  margin-right: -9px;
-  margin-top: 33px;
-  height: 1600px;
+.b-text-color_black {
+  color: #000;
 }
-
-#lunch-menu {
-  width: 1090px;
-  padding: 2px;
-  margin: 0;
-  position: absolute;
-  margin-top: 209px;
-  left: 50%;
-  margin-left: -13px;
-  margin-right: -50%;
-  transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
+.b-text-color_gray {
+  color: #777;
 }
-
-#menu {
-  font-family: 'Montserrat', sans-serif;
-  color: #333;
-  font-size: 18px;
-  display: inline-block;
-  margin-top: 15px;
-  padding: 11px 5px 0px 5px; 
-  width: 312px;
-  margin-left: 40px;
-  float: left;
+.b-text-color_gray-blue {
+  color: #b9bfc5;
 }
-
-#menu-item-name {
-  float: left;
+.b-text-block_page {
+  margin-bottom: 55px;
 }
-
-#menu-price {
-  display: inline;
-  float: right;
+.b-text-block__text-module {
+  position: static;
+}
+.b-text-block__text-module > *:last-child {
+  margin-bottom: 0;
+}
+.b-text-block_without-mrg-btm {
+  margin-bottom: 0;
+}
+.b-text-block__title {
+  font-weight: 800;
+  line-height: 4.8rem;
+  font-size: 4.2rem;
+  margin-bottom: 30px;
+  margin-top: -8px;
+}
+@media all and (min-width: 1280px) {
+  .b-text-block__title {
+    line-height: 6.4rem;
+    font-size: 4.8rem;
+  }
+}
+.b-text-block__title_page-title {
   margin-top: 0px;
+  margin-bottom: 40px;
+  line-height: 4.8rem;
+  font-size: 4.8rem;
 }
-
-#menu-description {
-  font-size: 14px;
-  margin-top: -17px;
-  margin-left: 0px;
-  float: left;
-}
-
-#section-price-info {
-  font-family: 'Montserrat', sans-serif;
-  color: #ff8b38;
-  font-size: 14px;
-  margin-left: 32px;
-  margin-top: 11px;
-  margin-bottom: -1px;
-}
-
-#soups-bar-text {
-  font-family: 'Montserrat', sans-serif;
-  color: #ff8b38;
-  font-size: 24px;
-  font-weight: 100;
-  margin: 0;
-  display: block-inline;
-  position: absolute;
-  left: 50%;
-  margin-right: -50%;
-  margin-left: 16px;
-  margin-top: -2px;
-  transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-}
-
-#soups-menu {
-  width: 1090px;
-  padding: 2px;
-  margin: 0;
-  position: absolute;
-  margin-top: 410px;
-  left: 50%;
-  margin-left: -15px;
-  margin-right: -50%;
-  transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-}
-
-#soup-description {
-  font-size: 14px;
-  margin-top: 1px;
-  margin-left: 0px;
-  float: left;
-}
-
-#salads-bar-text {
-  font-family: 'Montserrat', sans-serif;
-  color: #ff8b38;
-  font-size: 24px;
-  font-weight: 100;
-  margin: 0;
-  display: block-inline;
-  position: absolute;
-  left: 50%;
-  margin-right: -50%;
-  margin-left: 16px;
-  margin-top: -13px;
-  transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-}
-
-#sandwiches-bar-text {
-  font-family: 'Montserrat', sans-serif;
-  color: #ff8b38;
-  font-size: 24px;
-  font-weight: 100;
-  margin: 0;
-  display: block-inline;
-  position: absolute;
-  left: 50%;
-  margin-right: -50%;
-  margin-left: 16px;
-  margin-top: -13px;
-  transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-}
-
-#salads-menu {
-  width: 1090px;
-  padding: 2px;
-  margin: 0;
-  position: absolute;
-  margin-top: 715px;
-  left: 50%;
-  margin-left: -15px;
-  margin-right: -50%;
-  transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-}
-
-#salad-description {
-  font-size: 14px;
-  margin-top: -15px;
-  float: left;
-}
-
-#sandwiches-menu {
-  width: 1090px;
-  padding: 2px;
-  margin: 0;
-  position: absolute;
-  margin-top: 1250px;
-  left: 50%;
-  margin-left: -15px;
-  margin-right: -50%;
-  transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-}
-
-@media(max-width: 1100px) {
-  #salad-description {
-    font-size: 14px;
-    margin-top: -12px;
+@media all and (min-width: 1280px) {
+  .b-text-block__title_page-title {
+    line-height: 6rem;
+    font-size: 6rem;
   }
 }
-
-#drinks-beer-menu {
-  width: 1080px;
-  padding: 2px;
-  position: absolute;
-  left: 50%;
-  margin-top: -542px;
-  margin-left: -42px;
-  margin-right: -50%;
-  transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
+.b-text-block__title_application {
+  margin-top: 0px;
+  margin-bottom: 20px;
+  font-size: 4.8rem;
+  line-height: 4.8rem;
 }
-
-#drinks-wine-menu {
-  width: 1095px;
-  height: 220px;
-  margin: 0;
-  position: absolute;
-  left: 50%;
-  margin-top: -225px;
-  margin-left: -42px;
-  margin-right: -50%;
-  transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
+@media all and (min-width: 1280px) {
+  .b-text-block__title_application {
+    line-height: 6rem;
+    font-size: 6rem;
+  }
 }
-
-#drinks-nonalco-menu {
-  width: 1095px;
-  height: 220px;
-  margin: 0;
-  position: absolute;
-  left: 50%;
-  margin-top: 23px;
-  margin-left: -42px;
-  margin-right: -50%;
-  transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
+.b-text-block__title_main-page {
+  margin-top: 0px;
+  margin-bottom: 15px;
+  font-size: 4.8rem;
+  line-height: 4.8rem;
 }
-
-#wine-bar-text {
-  font-family: 'Montserrat', sans-serif;
+@media all and (min-width: 1280px) {
+  .b-text-block__title_main-page {
+    line-height: 6rem;
+    font-size: 6rem;
+  }
+}
+.b-text-block__title_about {
+  margin-top: 0px;
+  background: none;
+  z-index: 1;
   color: #fff;
-  font-size: 26px;
-  font-weight: 100;
-  margin: 0;
-  position: absolute;
-  left: 50%;
-  margin-top: -11px;
-  margin-left: 33px;
-  margin-right: -50%;
-  transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
+  position: relative;
 }
-
-#nonalco-bar-text {
-  font-family: 'Montserrat', sans-serif;
-  color: #fff;
-  font-size: 26px;
-  font-weight: 100;
-  margin: 0;
-  position: absolute;
-  left: 50%;
-  margin-top: -14px;
-  margin-left: 38px;
-  margin-right: -50%;
-  transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
+.b-text-block__content-row {
+  margin-bottom: 50px;
 }
-
-#hot-bar-text {
-  font-family: 'Montserrat', sans-serif;
-  color: #fff;
-  font-size: 26px;
-  font-weight: 100;
-  margin: 0;
-  position: absolute;
-  left: 50%;
-  margin-top: -14px;
-  margin-left: 33px;
-  margin-right: -50%;
-  transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
+.b-text-block__content-row:last-child {
+  margin-bottom: 0;
 }
-
-#drinks-hot-menu {
-  width: 1095px;
-  height: 220px;
-  margin: 0;
-  position: absolute;
-  left: 50%;
-  margin-top: 275px;
-  margin-left: -42px;
-  margin-right: -50%;
-  transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
+.b-text-block__description {
+  line-height: 24px;
+  font-weight: 400;
+  font-size: 1.8rem;
+  padding-right: 30px;
 }
-
-#drink-description {
-  font-size: 14px;
-  margin-top: 1px;
-  float: left;
+.b-text-block__content {
+  font-size: 1.5rem;
+  line-height: 24px;
 }
-
-#drink {
-  font-family: 'Montserrat', sans-serif;
-  color: #fff;
-  font-size: 18px;
-  display: inline-block;
-  margin-top: 15px;
-  padding: 11px 5px 0px 5px; 
-  width: 270px;
-  margin-left: 80px;
-  float: left;
+.b-text-block__content_f18 {
+  font-size: 1.8rem;
 }
-
-#second-solid-bar {
-  background-color: #fff;
+.b-text-block__content_mb30 {
+  margin-bottom: 30px;
+}
+.b-text-block__content table,
+.b-text-block__content h2,
+.b-text-block__content h3,
+.b-text-block__content h4,
+.b-text-block__content p,
+.b-text-block__content ul,
+.b-text-block__content ol {
+  margin-bottom: 20px;
+}
+.b-text-block__content *:last-child {
+  margin-bottom: 0;
+}
+.b-text-block__content table {
+  border: none;
+  width: 100%;
+}
+.b-text-block__content td,
+.b-text-block__content th {
+  padding: 8px 0;
+}
+.b-text-block__content th {
+  border-bottom: 1px solid #bebfbf;
+  text-align: left;
+  font-weight: 800;
+}
+.b-text-block__content tr {
+  border-bottom: 1px solid #e6e8e8;
+}
+.b-text-block__content ul {
+  padding: 0;
+}
+.b-text-block__content ul > li {
+  margin: 0 0 10px;
+  padding: 0 0 0 20px;
+  position: relative;
+}
+.b-text-block__content ul > li:after {
+  content: '—';
   position: absolute;
   left: 0;
+  top: 0;
+}
+.b-text-block__content ol {
+  padding: 0;
+  counter-reset: section;
+}
+.b-text-block__content ol > li {
+  margin: 0 0 10px;
+  padding: 0 0 0 20px;
+  position: relative;
+}
+.b-text-block__content ol > li:after {
+  content: counter(section) '.';
+  counter-increment: section;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.b-text-block__content h2,
+.b-text-block__content h3,
+.b-text-block__content h4 {
+  font-weight: 800;
+}
+.b-text-block__content h2 {
+  line-height: 4.2rem;
+  font-size: 4.2rem;
+  margin-bottom: 25px;
+}
+@media all and (min-width: 1280px) {
+  .b-text-block__content h2 {
+    line-height: 4.8rem;
+    font-size: 4.8rem;
+  }
+}
+.b-text-block__content h3 {
+  line-height: 3rem;
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+.b-text-block__content h4 {
+  line-height: 1.8rem;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+.b-text-block__content img {
+  width: 100%;
+  height: auto;
+}
+.b-text-block__content em {
+  font-style: italic;
+}
+.b-text-block__content strong {
+  font-weight: 800;
+}
+.b-text-block__content a {
+  color: #4665a4;
+}
+.b-text-block__content_application {
+  font-size: 1.6rem;
+}
+.b-text-block__content_application p {
+  margin-bottom: 10px;
+}
+.b-media-block__image-wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+.b-media-block__image-wrapper_lg {
+  max-height: 400px;
+}
+.b-media-block__image-wrapper_md {
+  max-height: 285px;
+}
+.b-media-block__image-wrapper_sm {
+  max-height: 120px;
+}
+.b-media-block__img {
+  width: 100%;
+  height: auto;
+}
+.b-head-bg-wrapper,
+.b-head-bg-wrapper__layout {
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
   right: 0;
-  height: 5735px;
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
 }
-
-#third-solid-bar {
-  background-color: #333;
+.b-head-bg-wrapper__layout {
+  background-color: rgba(0,0,0,0.4);
 }
-
-#copyright-info {
-  font-family: 'Montserrat', sans-serif;
-  color: #626262;
-  margin-right: 18px;
+.b-head-bgimage {
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+.b-head-bgimage_places {
+  z-index: 0;
+}
+.b-top-menu {
+  height: 60px;
+}
+.b-top-menu__item {
+  line-height: 60px;
+  height: 60px;
+}
+.b-top-menu__item:first-child {
+  margin-right: 20px;
+}
+.b-top-menu__item_left {
+  float: left;
+  margin-right: 20px;
+}
+.b-top-menu__item_right {
   float: right;
+  margin-left: 20px;
 }
-
-#social-icon {
-  height: 33px;
-  margin-top: 10px;
-  margin-left: 15px;
-  margin-right: -9px;
+.b-social {
+  font-size: 0;
 }
-
-#footer {
-  background-color: #faf9f8;
+.b-social__item {
+  display: inline-block;
+  margin-right: 20px;
+  font-size: 18px;
+}
+.b-main-menu {
+  display: inline-block;
+  text-align: left;
+  font-size: 0;
+  position: relative;
+  margin-top: 30px;
+}
+@media all and (min-width: 1280px) {
+  .b-main-menu {
+    margin-top: 27px;
+  }
+}
+.b-main-menu__logo {
+  width: 75px;
+  height: 100px;
+  background-repeat: no-repeat;
+  position: absolute;
+}
+@media all and (min-width: 1280px) {
+  .b-main-menu__logo {
+    width: 100px;
+    height: 150px;
+  }
+}
+.b-main-menu__logo_left {
+  background-image: url("../../../assets/img/logo1_.png");
+  background-size: 83px 129px;
+  background-position: 0 4px;
+  margin-top: -35px;
+  width: 83px;
+  height: 135px;
+  left: 0;
+}
+@media all and (min-width: 1280px) {
+  .b-main-menu__logo_left {
+    height: 135px;
+    margin-top: -25px;
+    margin-right: -83px;
+  }
+}
+.b-main-menu__logo_right {
+  background-image: url("../../../assets/img/logo2_.png");
+  background-size: 62px 84px;
+  background-position: 100% 0;
+  margin-left: -75px;
+  height: 100px;
+  width: 62px;
+  right: 0;
+}
+@media all and (min-width: 1280px) {
+  .b-main-menu__logo_right {
+    height: 100px;
+    margin-left: -100px;
+  }
+}
+.b-main-menu-list {
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+  padding: 20px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  white-space: nowrap;
+}
+.b-main-menu-list__item {
+  display: inline-block;
+  position: relative;
+/*items-indents = 1.8vw;//25px
+    margin-right:items-indents;*/
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-left: -20px;
+  margin-right: -20px;
+}
+.b-main-menu-list__item:first-child {
+  margin-left: 0;
+}
+.b-main-menu-list__item:last-child {
+  margin-right: 0;
+}
+.b-main-menu-list__item.is-current:before {
+  content: '';
+  border-bottom: 2px solid;
+  position: absolute;
+  bottom: -22px;
+  width: 100%;
+}
+.b-slogan {
+  margin: 210px auto 0;
+}
+.b-slogan__description {
+  line-height: 1.6em;
+}
+.b-slogan__button-play {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  margin-top: 40px;
+  font-size: 50px;
+  position: relative;
+}
+.b-slogan__button-play:before {
+  content: '';
+  width: 50px;
   height: 50px;
   position: absolute;
-  width: 100%;
-  bottom: 0px;
-  min-width: 600px;
-}
-
-#location-bar-text {
-  font-family: 'Montserrat', sans-serif;
-  color: #333;
-  font-size: 30px;
-  margin: 0;
-  position: absolute;
-  margin-top: 40px;
-  margin-left: 50%;
-  margin-right: -50%;
-  transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-}
-
-#contact-bar-text {
-  font-family: 'Montserrat', sans-serif;
-  color: #fff;
-  font-size: 30px;
-  margin: 0;
-  position: absolute;
-}
-
-#menu-button {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 21px;
-  text-decoration: none;
-  color: #333;
-  margin-left: 120px;
-  margin-right: 120px;
-  margin-bottom: -50px;
-  display: inline-block;
-  transition: 0.2s ease-in-out;
-}
-
-#menu-button:hover {
-  font-weight: 200;
-}
-
-#location-menu {
-  margin-top: 105px;
-  position: absolute;
-  width: 780px;
-  left: 50%;
-  margin-left: 0px;
-  margin-right: -50%;
-  transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-}
-
-#location {
-  font-family: 'Montserrat', sans-serif;
-  color: #333;
-  font-size: 18px;
-  display: inline-block;
-  margin-top: 8px;
-  padding: 11px 5px 0px 5px;
-  width: 208px;
-  margin-right: -15px;
-  margin-left: 40px;
-  float: left;
-}
-
-#location-name {
-  font-size: 19px;
-}
-
-#location-desc {
-  margin-top: 3px;
-  margin-bottom: -2px;
-  font-size: 15px;
-}
-
-#google-map {
-  position: absolute;
-  top: 200px;
-  height: 162px;
-  width: 422px;
-  margin-left: -100px;
-  left: 50%;
-  margin-right: -50%;
-  transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-}
-
-#google-map-container {
-  height: 470px;
-  width: 700px;
-  margin-top: 3px;
-  margin-left: -35px;
-}
-
-#make-a-reservation {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 23px;
-  color: #333;  
-  text-align: center;
-  margin-top: 18px;
-}
-
-#text-box {
-  font-family: 'Montserrat', sans-serif;
-  height: 25px;
-  width: 450px;
-  border: 0px;
-  border: 2px solid #C7C7C7;
-  outline: none;
-  margin-bottom: 30px;
-  margin-top: 10px;
-  padding: 5px 8px 6px 8px;
-}
-
-#text-box:active {
-  outline: #E07065;
-}
-
-#text-box-message {
-  font-family: 'Montserrat', sans-serif;
-  height: 25px;
-  width: 450px;
-  border: 0px;
-  border: 2px solid #C7C7C7;
-  outline: none;
-  margin-top: 35px;
-  resize: none;
-  height: 140px;
-  padding: 8px 8px 5px 8px;
-}
-
-::-webkit-input-placeholder {
-  color: #595959;
-}
-
-#submit-button {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 15px;
-  color: #fff;
-  padding: 10px 17px 10px 17px;
-  text-decoration: none;
-  background-color: #E07065;
-  position: absolute;
-  bottom: 52px;
-  right: 71px;
-  float: right;
-}
-
-#pen-icon {
-  height: 11px;
-  margin-left: 8px;
-}
-
-#dialog-overlay {
-  width: 100%;
-  height: 100%;
-  filter: alpha(opacity=50); 
-  -moz-opacity: 0.5;
-  -khtml-opacity: 0.5;
-  opacity: 0.5;
-  background: #000; 
-  position: fixed; 
   top: 0;
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px #fff;
   left: 0;
-  z-index: 3000; 
-  display: none;
+  top: 0;
 }
-
-#menu-fillout {
-  margin-left: -23px;
-  margin-top: -100px;
-}
-
-#dialog-box {
-  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-  -moz-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-  background: #fff;
-  width: 610px;
-  height: 635px;
-  position: fixed; 
-  z-index: 5000;
-  left: 50%;
+.b-slogan__button-play:after {
+  content: '';
+  position: absolute;
   top: 50%;
-  margin-left: 2px;
-  margin-right: -50%;
-  transform: translate(-50%, -50%);
+  left: 50%;
+  border: 10px solid transparent;
+  border-left: 14px solid #fff;
   -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  display: none;
+          transform: translate(-50%, -50%);
+  margin-left: 7px;
 }
-
-#dialog-box #dialog-content {
-  text-align: left; 
-  padding: 10px; 
-  margin: 13px;
-  color: #666; 
-  font-family: arial;
-  font-size: 11px; 
-}
-
-#close-dialog-menu {
-  height: 15px;
-  float: right;
-  margin-top: -6px;
-  margin-right: -5px;
+.b-slogan__button-play:hover {
   cursor: pointer;
 }
-
-#section-line {
-  margin-top: 1150px;
-  border: 0;
-  height: 0;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+.b-slogan__button-play:hover:after {
+  content: '';
+  border-left-color: #f47f7a;
 }
-
-#about-us-section {
-  width: 690px;
-  margin-left: 50%;
-  margin-right: -50%;
-  margin-top: 800px;
-  transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
+.b-slogan__button-play:hover:before {
+  box-shadow: 0 0 0 3px #f47f7a;
 }
-
-#about-us {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 29px;
-  color: #333;
-  text-align: center;
-  margin-top: 680px;
+.b-slogan__url {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
 }
-
-#info-about-us {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 15px;
-  color: #333;
-}
-
-#image-gallery {
-  margin-top: 125px;
-}
-
-#img-wrapper {
-  display: inline-block;
-  overflow: hidden;
-  vertical-align: middle;
-  height: 440px;
+.b-place-title {
+  z-index: 2;
+  position: relative;
   width: 700px;
-  margin-top: 45px;
-  margin-bottom: -30px;
-  margin-left: 50%;
-  margin-right: -50%;
-  transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
+  margin: 120px auto 0;
+}
+.b-place-title__header {
+  text-transform: uppercase;
+}
+.b-place-title__description {
+  margin-top: 40px;
+  line-height: 1.6em;
+}
+.p-main {
+  display: block;
+  position: relative;
+  background: -webkit-linear-gradient(top, rgba(192,202,209,0.5) 0px, rgba(192,202,209,0) 29px);
+  background: linear-gradient(to bottom, rgba(192,202,209,0.5) 0px, rgba(192,202,209,0) 29px);
+}
+.p-main_ptop100 {
+  padding-top: 100px;
 }
 
-#img-wrapper img {
-  transition: 0.2s ease-in-out;
-  margin-top: -10px;
+
+
+
+
+
+
+@keyframes rotate360 {
+  to { transform: rotate(360deg); }
 }
+img.ring-outer { animation: 2s rotate360 infinite linear; }
 
-#img-wrapper:hover img {
-  transform:scale(1.1);
-  transition: 0.2s ease-in-out;
-}
 
-#main-image {
-  width: 110%;
-}
-
-@media(max-width: 1100px) {
-  #first-solid-bar {
-    background-color: #fff;
-    margin-left: -9px;
-    margin-right: -9px;
-    height: 2065px;
-  }
-  
-  #no-opacity-two {
-    height: 690px;
-  }
-  
-  #menu {
-    font-size: 15px;
-    width: 308px;
-    margin-left: 23px;
-    margin-right: 23px;
-  }
-  
-  #drink {
-    font-size: 15px;
-    width: 251px;
-    margin-left: 26px;
-    margin-right: 26px;
-  }
-
-  #menu-description {
-    margin-top: -12px;
-  }
-  
-  #lunch-menu {
-    margin-top: 229px;
-    margin-left: 8px;
-    width: 730px;
-  }
-  
-  #soups-menu {
-    margin-top: 535px;
-    margin-left: 8px;
-    width: 730px;
-  }
-  
-  #salads-menu {
-    margin-top: 895px;
-    margin-left: 8px;
-    width: 730px;
-  }
-  
-  #sandwiches-menu {
-    margin-top: 1605px;
-    margin-left: 8px;
-    width: 730px;
-  }
-  
-  #sandwiches-bar-text {
-    margin-left: -12px;
-  }
-  
-  #drink {
-    margin-left: 50px;
-    margin-right: 50px;
-  }
-  
-  #drinks-beer-menu {
-    width: 825px;
-    margin-top: -465px;
-    margin-left: 32px !important;
-    position: absolute;
-  }
-  
-  #drinks-beer-menu {
-    margin-left: 79px;
-  }
-  
-  #drinks-wine-menu {
-    width: 825px;
-    margin-top: -90px;
-    margin-left: 32px !important;
-    position: absolute;
-  }
-  
-  #drinks-nonalco-menu {
-    width: 825px;
-    margin-top: 218px;
-    margin-left: 32px !important;
-    position: absolute;
-  }
-  
-  #drinks-hot-menu {
-    width: 825px;
-    margin-top: 529px;
-    margin-left: 32px !important;
-    position: absolute;
-  }
-  
-  #soups-bar-text, #salads-bar-text {
-    margin-left: -10px;
-  }
-  
-  #wine-bar-text {
-    margin-left: -55px;
-  }
-  
-  #hot-bar-text {
-    margin-left: -77px;
-  }
-  
-  #beer-bar-text {
-    margin-left: -54px;
-  }
-  
-  #nonalco-bar-text {
-    margin-left: -54px;
-  }
-
-  #section-price-info {
-    margin-left: -20px;
-  }
-  
-  #phone-number {
-    visibility: hidden;
-  }
-  
-  #drinks-section {
-    font-family: 'Montserrat', sans-serif;
-    text-decoration: none;
-    font-size: 16px;
-    color: #fff;
-    float: left;
-    margin-right: 100px;
-    margin: 0;
-    position: absolute;
-    left: -41px;
-    margin-top: 45px;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
-    transition: 0.090s ease-in-out;
-  }
-
-  #menu-section {
-    font-family: 'Montserrat', sans-serif;
-    text-decoration: none;
-    font-size: 16px;
-    color: #fff;
-    float: right;
-    margin-right: 100px;
-    margin: 0;
-    position: absolute;
-    left: 99px;
-    margin-top: 45px;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
-    transition: 0.090s ease-in-out;
-  }
-
-  #location-section {
-    font-family: 'Montserrat', sans-serif;
-    text-decoration: none;
-    font-size: 16px;
-    color: #fff;
-    float: left;
-    margin-right: 100px;
-    margin: 0;
-    position: absolute;
-    left: -195px;
-    margin-top: 45px;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
-    transition: 0.090s ease-in-out;
-  }
-
-  #contact-section {
-    font-family: 'Montserrat', sans-serif;
-    text-decoration: none;
-    font-size: 16px;
-    color: #fff;
-    float: right;
-    margin-right: 100px;
-    margin: 0;
-    position: absolute;
-    left: 240px;
-    margin-top: 45px;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
-    transition: 0.090s ease-in-out;
-  }
-  
-  #nav-bar-item-top, #nav-bar-item-drinks, #nav-bar-item-menu, #nav-bar-item-contact {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 15px;
-    text-decoration: none;
-    color: #eee;
-    padding: 0px 25px 0px 25px;
-    display: inline-block;
-    margin-top: 20px;
-  }
-  
-  #dinner-menu-bar-text {
-    font-size: 25px;
-    margin-left: -235px;
-  }
-  
-  #lunch-menu-bar-text {
-    font-size: 25px;
-  }
-  
-  #happy-hour-bar-text {
-    font-size: 25px;
-    margin-left: 235px;
-  }
-  
-  #when-available-dinner {
-    font-size: 14px;
-    left: 50%;
-    margin-right: -50%;
-    margin-top: 59px;
-    margin-left: -236px;
-  }
-  
-  #when-available-lunch {
-    font-size: 14px;
-    left: 50%;
-    margin-right: -50%;
-    margin-top: 59px;
-    margin-left: 1px;
-  }
-  
-  #when-available-happy {
-    font-size: 14px;
-    left: 50%;
-    margin-right: -50%;
-    margin-top: 59px;
-    margin-left: 236px;
-  }
-}
-
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
-  /* Nothing here just yet */
-}
